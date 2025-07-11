@@ -1,0 +1,42 @@
+Pawn-Passant/
+│
+├── main.py                      # Entry point for launching the GUI
+├── requirements.txt             # Dependencies
+├── pyproject.toml               # (Optional) for build system config
+├── README.md
+│
+├── assets/                      # Images, icons, sound effects, fonts
+│   ├── icons/
+│   ├── boards/
+│   └── sounds/
+│
+├── core/                        # Game logic, rules, utilities
+│   ├── engine_interface.py      # Wrapper for UCI engine like Stockfish
+│   ├── game_manager.py          # Handles game state, moves, history
+│   ├── analysis.py              # Game analysis tools (eval, blunders, etc.)
+│   ├── openings.py              # Opening database and learning logic
+│   └── utils.py                 # Shared helpers
+│
+├── gui/                         # All UI components and Qt screens
+│   ├── main_window.py
+│   ├── board_widget.py
+│   ├── game_screen.py
+│   ├── analysis_screen.py
+│   ├── learn_screen.py
+│   ├── multiplayer_screen.py
+│   └── styles.qss               # Qt Stylesheet
+│
+├── data/                        # Local offline data (e.g., openings, games)
+│   ├── openings/                # PGN or preprocessed openings
+│   ├── games/                   # Saved local games (PGN/JSON)
+│   └── settings.json            # App settings
+│
+├── services/                    # Interfaces for online play and storage
+│   ├── online_api.py            # REST or WebSocket for online play
+│   ├── sync_service.py          # Cloud sync if needed in future
+│   └── user_profile.py          # Profile settings and preferences
+│
+└── tests/                       # Unit and integration tests
+    ├── test_core/
+    ├── test_gui/
+    └── test_services/
